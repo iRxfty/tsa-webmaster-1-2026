@@ -239,3 +239,24 @@
 }
 
 /* footer */
+.footer{
+    background-color: rgb(153, 128, 168);
+    height: 20vh;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+.footer-section{
+    font-family: 'Trebuchet MS';
+    color: rgb(0,0,0);
+    width: 33%;
+}
+
+.footer-header{
+    font-size: 15px;
+}
+
+.footer-text{
+    display: block;
+    font-size: 12px;
+}
