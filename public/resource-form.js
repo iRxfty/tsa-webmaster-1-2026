@@ -1,3 +1,7 @@
+import { auth, db } from "../config.js";
+import { ref, push, onValue, remove, set, get, update } from "firebase/database";
+import { onAuthStateChanged } from "firebase/auth";
+
 const resourceDropdown = document.getElementById("resourceType");
 
 resourceDropdown.onchange = () => {
@@ -46,3 +50,10 @@ dateCheckbox.addEventListener("input", () => {
         document.getElementById("singleDate").classList.add("hidden")
     }
 })
+/* 
+const form = document.getElementById("new-resource");
+form.onsubmit = () => {
+    const dbref = ref(db, "resources")
+    const formData = new FormData(form)
+    console.log(formData)
+} */

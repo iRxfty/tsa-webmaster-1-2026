@@ -13,9 +13,19 @@
     }
 
     p {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 10px;
-    padding: 10px 0;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 10px;
+        padding: 10px 0;
+    }
+
+    .page-container{
+        background-image: url("../assets/nature-bg.jpg");
+        background-attachment:scroll;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display:flex;
+        justify-content: center;
     }
 }
 
@@ -227,3 +237,24 @@
 }
 
 /* footer */
+.footer{
+    background-color: rgb(153, 128, 168);
+    height: 20vh;
+    text-align: center;
+    padding-top: 3vh;
+}
+
+.footer-section{
+    font-family: 'Trebuchet MS';
+    color: rgb(0,0,0);
+    width: 33%;
+}
+
+.footer-header{
+    font-size: 15px;
+}
+
+.footer-text{
+    display: block;
+    font-size: 12px;
+}

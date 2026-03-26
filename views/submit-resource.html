@@ -5,43 +5,46 @@
 {% endblock %}
 
 {% block content %}
-    <div>
-        <form id="new-resource" action="/submit-resource" method="post">
+    <div class="page-container h-screen">
+        <form id="new-resource" class="my-2 bg-white w-3/4 px-3">
+            <h1>Submit New Community Resources</h1><br>
             <label for="rName" required>Resource Name</label>
-            <input id="rName" name="rName" type="text">
+            <input id="rName" name="rName" type="text" class="border-dashed border my-2">
             <br>
-            <label for="resourceType">Resource Type:</label>
-            <select id="resourceType" name="resourceType" required>
-                <option hidden disabled selected value> -- select an option -- </option>
-                <option value="nonprofit">Non-profit</option>
-                <option value="event">Community Event</option>
-                <option value="program">Program</option>
-                <option value="hotline">Support Hotline</option>
-                <option value="info">Information Resource</option>
-                <!-- TODO: Add clarification of each type of resource -->
-            </select>
+            <div class="block">
+                <label for="resourceType">Resource Type:</label>
+                <select id="resourceType" name="resourceType" required class="border-dashed border my-2">
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="nonprofit">Non-profit</option>
+                    <option value="event">Community Event</option>
+                    <option value="program">Program</option>
+                    <option value="hotline">Support Hotline</option>
+                    <option value="info">Information Resource</option>
+                    <!-- TODO: Add clarification of each type of resource -->
+                </select>
+            </div>
 
             <fieldset id="addressBox" class="hidden">
                 <legend>Address</legend>
                 <label for="streetAddress">Street Address</label>
-                <input type="text" name="streetAddress" id="streetAddress">
+                <input type="text" name="streetAddress" id="streetAddress" class="border-dashed border my-2">
                 <br>
                 <label for="town">Town</label>
-                <input type="text" id="town" name="town">
+                <input type="text" id="town" name="town" class="border-dashed border my-2">
                 <br>
                 <label for="zip">Zip Code</label>
-                <input type="number" id="zip" name="zip" pattern="0(7|8)\d{3}">
+                <input type="number" id="zip" name="zip" pattern="0(7|8)\d{3}" class="border-dashed border my-2">
                 <br>
                 <label for="state">State</label>
-                <input type="text" name="state" id="NJ" value="NJ" readonly>
+                <input type="text" name="state" id="NJ" value="NJ" readonly class="border-dashed border my-2">
             </fieldset>
 
             <fieldset id="contactInfo" class="hidden">
                 <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone">
+                <input type="tel" name="phone" id="phone" class="border-dashed border my-2">
                 <br>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" class="border-dashed border my-2">
                 
             </fieldset>
 
@@ -51,27 +54,29 @@
 
                 <div id="singleDate">
                     <label for="date">Date</label>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="date" id="date" class="border-dashed border my-2">
                 </div>
 
                 <div id="dateRange" class="hidden">
                     <label for="startDate">Start Date:</label>
-                    <input type="date" name="startDate" id="startDate">
+                    <input type="date" name="startDate" id="startDate" class="border-dashed border my-2">
                     <br>
                     <label for="endDate">End Date:</label>
-                    <input type="date" name="endDate" id="endDate">
+                    <input type="date" name="endDate" id="endDate" class="border-dashed border my-2">
                 </div>
             </fieldset>
 
             <div id="linkBox" class="hidden">
                 <label for="link">Link</label>
-                <input type="url" name="link" id="link">
+                <input type="url" name="link" id="link" class="border-dashed border my-2">
             </div>
-
+            <br>
             <label for="desc">Description</label>
-            <textarea id="desc" name="desc"></textarea>
-
-            <input type="submit">
+            <textarea id="desc" name="desc" class="border-dashed border my-2"></textarea>
+            <br>
+            <label for="tags">Tags (separate with commas) </label>
+            <input type="text" name="tags" class="border-dashed border my-2">
+            <input class="px-3 bg-blue-500 text-white rounded-md block" type="submit">
         </form>
     </div>
 {% endblock %}
