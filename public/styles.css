@@ -218,7 +218,7 @@ body {
 .header-title{
     display: flex;
     margin-right:auto;
-    
+    margin-top: 1vh;
     margin-left: 1vw;
 }
 
