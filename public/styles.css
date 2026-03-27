@@ -3,13 +3,18 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
 
-@import url('https://fonts.googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
 
 @layer base {
 
     h1 {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 28px;
+        line-height: 1.5;
     }
 
     p {
@@ -18,12 +23,17 @@
         padding: 10px 0;
     }
 
+    h2 {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
     .page-container{
         background-image: url("../assets/nature-bg.jpg");
-        background-attachment:scroll;
+        background-attachment:fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
         display:flex;
         justify-content: center;
     }
@@ -31,8 +41,12 @@
 
 @layer components {
     .hero-section {
+        min-height: 100vh;
+        justify-content: center;
         background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://cdn.schema.io/fusus-atlanta/63ea6079c6a0dd00122a3e12/78e7b477d72031d524d3fa8b6b711c31');
         background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -47,25 +61,85 @@
         text-align: left;
         position: relative;
         margin-bottom: 60px;
+        display: flex;
+        flex-wrap: nowrap;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        align-items: center;
+    }
+
+    .header-content {
+        flex: 1 1 45%; /* left side text */
+        min-width: 250px;
+    }
+
+    .header-content h1 {
+        margin-bottom: 80px; 
+    }   
+
+    .header-content .intro-text {
+        margin-top: 20px;
+    }
+
+    .header-image {
+        flex: 1 1 15%; /* right side image */
+        width: 150px;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        overflow: hidden; 
+        object-position: right;
+    }
+
+    .header-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        opacity: 0.5;
+    }
+
+    .header-image::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    
+        background-color: rgba(153, 128, 168, 0.4); 
+        mix-blend-mode: multiply; 
+        pointer-events: none; 
     }
 
     .cards-container {
         display: flex;
-        gap: 30px;
+        gap: 50px;
         margin-top: 50px;
         align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .card {
         background: white;
         padding: 20px;
         width: 220px;
+        height: 400px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     }
 
     .card-img {
-        background: #000000; /* placeholder */
-        height: 150px;
+        height: 200px;
         margin-bottom: 15px;
+        display: flex;
+        object-fit: cover;
+        object-position: right;
     }
     /* offset of cards */
     .offset-1 { margin-top: 40px; }
@@ -78,18 +152,16 @@
     }
 }
 
-.body{
+body {
     margin: 0;
 }
 
 /* index */
 .index-container{
     background-image: url("../assets/nature-bg.jpg");
-    background-attachment:scroll;
+    background-attachment:fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 400vh;
     display:flex;
     justify-content: center;
 }
@@ -102,12 +174,11 @@
     padding: 15px;
     background-color: rgb(238, 241, 243);
     display: grid;
-    
-    
 }
 
 .intro-text{
     margin-top: auto;
+    font-size: 10px;
 }
 
 .row{
@@ -133,7 +204,7 @@
   left: 0;
   display: block;
   border-radius: 50px;
-  background: #b1dae7;
+  background: rgb(153, 128, 168);
   width: 45px;
   height: 45px;
   transition: all 0.3s ease;
@@ -141,11 +212,10 @@
 
 .down-button span {
   position: relative;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: #234567;
 }
 
 .down-button svg {
@@ -155,7 +225,7 @@
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #234567;
+  stroke: #f9f9f9;
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
@@ -163,7 +233,7 @@
 
 .down-button:hover:before {
   width: 100%;
-  background: #b1dae7;
+  background: rgb(153, 128, 168);
 }
 
 .down-button:hover svg {
@@ -188,6 +258,9 @@
     display: flex;
     overflow:hidden;
     justify-content: flex-end;
+    font-family: 'PT Sans', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
 }
 
 .dropdown{
@@ -197,7 +270,7 @@
 .header-title{
     display: flex;
     margin-right:auto;
-    
+    margin-top: 1vh;
     margin-left: 1vw;
 }
 
@@ -241,22 +314,89 @@
 /* footer */
 .footer{
     background-color: rgb(153, 128, 168);
-    height: 20vh;
-    text-align: center;
-    padding-top: 3vh;
+    height: 25vh;
+    text-align: left;
+    padding-top: 4vh;
+    padding-left: 6vw;
+    padding-bottom: 3vh;
 }
 
 .footer-section{
     font-family: 'Trebuchet MS';
-    color: rgb(0,0,0);
+    color: #ffffff;
     width: 33%;
 }
 
 .footer-header{
     font-size: 15px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-text{
     display: block;
     font-size: 12px;
+}
+
+/* Sign In and Sign Up */
+.register-form {
+    background: white;
+    padding: 40px;
+    width: 320px;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    line-height: 1.5;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.register-form:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.register-body {
+    height: 100vh;
+    background: url('https://www.mycentraljersey.com/gcdn/presto/2021/07/08/PAPP/6e99e3f1-ee02-4e10-9f30-9875b54a14ce-mid16.jpg?crop=1800,2400,x720,y0') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.register-button {
+    height: 30px;
+    width: 80px;
+    align-items: center;
+    background-color: rgb(153, 128, 168);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#signInBtn {
+    margin: 10px auto 0 auto;
+    padding: 10px;
+    width: 50%;
+    align-items: center;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form h1 {
+    margin-bottom: 20px;
 }
