@@ -5,46 +5,50 @@
 {% endblock %}
 
 {% block content %}
-<div class="forum-wrapper">
-    <h2 class="forum-heading">Community Forum</h2>
-    <p class="forum-subheading">Share ideas, ask questions, and connect with Monmouth County residents.</p>
+<div class="forum-page">
+    <div class="forum-wrapper">
+        <div class="forum-wrapper">
+            <h2 class="forum-heading">Community Forum</h2>
+            <p class="forum-subheading">Share ideas, ask questions, and connect with Monmouth County residents.</p>
 
-    <!-- Sign-in prompt (shown when logged out) -->
-    <div id="forum-signin-prompt" class="forum-signin-prompt">
-        <p>🔒 <a href="/signIn">Sign in</a> or <a href="/register">create an account</a> to join the conversation.</p>
-    </div>
+            <!-- Sign-in prompt (shown when logged out) -->
+            <div id="forum-signin-prompt" class="forum-signin-prompt">
+                <p>🔒 <a href="/signIn">Sign in</a> or <a href="/register">create an account</a> to join the conversation.</p>
+            </div>
 
-    <!-- New-thread form (shown when logged in) -->
-    <form id="new-thread-form" class="new-post-form" style="display:none;">
-        <h3>Start a Discussion</h3>
-        <input type="text" id="thread-title" placeholder="Thread title" required maxlength="120">
-        <select id="thread-category">
-            <option value="general">General</option>
-            <option value="events">Events</option>
-            <option value="resources">Resources</option>
-            <option value="question">Question</option>
-            <option value="announcement">Announcement</option>
-        </select>
-        <textarea id="thread-body" placeholder="What's on your mind?" required maxlength="2000" rows="4"></textarea>
-        <div class="image-upload-row">
-            <label for="thread-image" class="image-upload-label">📷 Attach Image</label>
-            <input type="file" id="thread-image" accept="image/*" class="image-upload-input">
+            <!-- New-thread form (shown when logged in) -->
+            <form id="new-thread-form" class="new-post-form" style="display:none;">
+            <h3>Start a Discussion</h3>
+                <input type="text" id="thread-title" placeholder="Thread title" required maxlength="120">
+                <select id="thread-category">
+                    <option value="general">General</option>
+                    <option value="events">Events</option>
+                    <option value="resources">Resources</option>
+                    <option value="question">Question</option>
+                    <option value="announcement">Announcement</option>
+                </select>
+                <textarea id="thread-body" placeholder="What's on your mind?" required maxlength="2000" rows="4"></textarea>
+                <div class="image-upload-row">
+                    <label for="thread-image" class="image-upload-label">📷 Attach Image</label>
+                    <input type="file" id="thread-image" accept="image/*" class="image-upload-input">
+                </div>
+                <button type="submit" class="post-submit-btn">Post Thread</button>
+            </form>
+
+            <!-- Category filter bar -->
+            <div class="filter-bar">
+                <span class="filter-label">Filter:</span>
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="general">General</button>
+                <button class="filter-btn" data-category="events">Events</button>
+                <button class="filter-btn" data-category="resources">Resources</button>
+                <button class="filter-btn" data-category="question">Question</button>
+                <button class="filter-btn" data-category="announcement">Announcement</button>
+            </div>
+
+            <!-- Threads feed (populated by forum.js) -->
+            <div id="forum-threads"></div>
         </div>
-        <button type="submit" class="post-submit-btn">Post Thread</button>
-    </form>
-
-    <!-- Category filter bar -->
-    <div class="filter-bar">
-        <span class="filter-label">Filter:</span>
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="general">General</button>
-        <button class="filter-btn" data-category="events">Events</button>
-        <button class="filter-btn" data-category="resources">Resources</button>
-        <button class="filter-btn" data-category="question">Question</button>
-        <button class="filter-btn" data-category="announcement">Announcement</button>
     </div>
-
-    <!-- Threads feed (populated by forum.js) -->
-    <div id="forum-threads"></div>
 </div>
 {% endblock %}
