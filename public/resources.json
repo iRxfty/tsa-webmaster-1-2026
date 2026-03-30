@@ -34,5 +34,53 @@
         "desc": "The Friendship Circle of Central Jersey was founded with the goal of promoting a greater awareness and understanding of both the unique needs and the unique gifts of people with special needs, and encourages respect and empathy for those facing challenges.",
         "address": "200 US 9, Suite 300\nManalapan, NJ 07726",
         "contact": "732-536-2319"
+    }, {
+        "id": 5,
+        "rName": "180 Turning Lives Around",
+        "website": "https://180nj.org/",
+        "desc": "Support for survivors of domestic violence and abuse.",
+        "address": "Hazlet, NJ",
+        "contact": "732-264-4111",
+        "resourceType": "support"
+    }, {
+        "id": 6,
+        "rName": "Monmouth County Crisis Intervention Unit",
+        "website": "https://www.co.monmouth.nj.us/1315/Crisis-Intervention-Unit",
+        "desc": "Crisis intervention services for individuals in distress.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-6400",
+        "resourceType": "hotline"
+    }, {
+        "id": 7,
+        "rName": "Monmouth County Youth Services Commission",
+        "website": "https://www.co.monmouth.nj.us/1321/Youth-Services-Commission",
+        "desc": "Programs and resources for youth development and support.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-6400",
+        "resourceType": "program"
+    }, {
+        "id": 8,
+        "rName": "Monmouth County Library",
+        "website": "https://www.monmouthcountylib.org/",
+        "desc": "Library services and resources for the community.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-7220",
+        "resourceType": "nonprofit"
+    }, {
+        "id": 9,
+        "rName": "Monmouth County Arts Council",
+        "website": "https://www.monmouthcountyartscouncil.org/",
+        "desc": "Support and promotion of the arts in Monmouth County.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-8981",
+        "resourceType": "nonprofit"
+    }, {
+        "id": 15,
+        "rName": "Resource Engineering Public Hearing Document (Nov 2024)",
+        "website": "https://www.co.monmouth.nj.us/documents/70/Resource_Engineering_Public_Hearing_Nov72024.pdf",
+        "desc": "Official Monmouth County document detailing a proposed waste transfer station and public hearing process.",
+        "address": "Monmouth County, NJ",
+        "contact": "N/A",
+        "resourceType": "transcript"
     }]
 }
