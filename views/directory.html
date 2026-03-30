@@ -1,19 +1,132 @@
 {% extends "template.html" %}
 
 {% block content %}
-    <div class="page-container">
-        <div class="content-wrapper bg-white px-2 w-3/4">
-            <h2 class="text-2xl my-4">Community Resource Directory</h2>
-            <ul>
-                {% for r in resources %}
-                    <li class="hover:bg-gray-200 my-3 px-1 rounded-md">
-                        <h3 class="rTitle text-xl">{{ r.rName }}</h3>
-                        <p class="rInfo text-base">{{ r.address }} | {{ r.contact }}</p>
-                        <a href={{ r.website }} class="rLink text-base">{{ r.website }}</a>
-                        <p class="rDesc text-base">{{ r.desc }}</p>
+<div class="page-container">
+    <div class="content-wrapper bg-white px-6 py-4 w-3/4 shadow-md mx-auto">
+
+        <h2 class="text-3xl font-bold my-4">Community Resource Directory</h2>
+
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('nonprofits')">
+            Nonprofits
+        </h3>
+        <ul id="nonprofits" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "nonprofit" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
                     </li>
-                {% endfor %}
-            </ul>
-        </div>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <!-- Events -->
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('events')">
+            Community Events
+        </h3>
+        <ul id="events" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "event" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <!-- Programs -->
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('programs')">
+            Programs
+        </h3>
+        <ul id="programs" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "program" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <!-- Hotlines -->
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('hotlines')">
+            Hotlines
+        </h3>
+        <ul id="hotlines" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "hotline" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('support')">
+            Support Services
+        </h3>
+        <ul id="support" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "support" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+        <!-- Interviews, Transcripts, Podcasts -->
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('media')">
+            Media
+        </h3>
+        <ul id="media" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "media" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
     </div>
+</div>
+
+<script>
+function toggleSection(id) {
+    const sections = ["nonprofits", "events", "programs", "hotlines", "support", "media"];
+
+    sections.forEach(sec => {
+        const el = document.getElementById(sec);
+        if (sec === id) {
+            el.classList.toggle("hidden");
+        } else {
+            el.classList.add("hidden");
+        }
+    });
+}
+</script>
+
 {% endblock %}
