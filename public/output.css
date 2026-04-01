@@ -58,7 +58,7 @@
 }
 
 #user-greeting {
-  color: #2d6a4f;
+  color: #ffffff;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 4px 10px;
@@ -66,13 +66,13 @@
 
 #signout-btn {
   cursor: pointer;
-  color: #d00;
+  color: #ffffff;
   font-size: 0.9rem;
   text-decoration: underline;
 }
 
 #signout-btn:hover {
-  color: #a00;
+  color: #e0e0e0;
 }
 
 .signin-footer {

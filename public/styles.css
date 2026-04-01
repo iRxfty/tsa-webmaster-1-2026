@@ -636,22 +636,269 @@ html, body {
   .featured-section { padding: 36px 32px 70px; gap: 20px; }
   .featured-label { font-size: 1.1rem; letter-spacing: 5px; }
   .featured-grid { grid-template-columns: repeat(2, 175px); grid-template-rows: repeat(2, 140px); gap: 14px; }
-  .footer { padding: 22px 32px 28px; }
   .qr-codes img { width: 90px; height: 90px; }
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
-  .hero { height: 160px; padding: 0 16px 16px; }
-  .hero h1 { font-size: 1.6rem; letter-spacing: 3px; }
-  .featured-section { padding: 24px 16px 60px; gap: 14px; }
-  .featured-label { font-size: 0.9rem; letter-spacing: 4px; }
-  .featured-grid { grid-template-columns: repeat(2, 140px); grid-template-rows: repeat(2, 112px); gap: 10px; }
-  .featured-card { border-radius: 12px; }
-  .view-all { font-size: 0.9rem; bottom: 16px; }
-  .footer { padding: 16px 16px 22px; font-size: 0.85rem; }
+
+  /* ---- Navbar ---- */
+  #navigation_box {
+    flex-wrap: wrap;
+    padding: 8px 10px;
+    gap: 4px;
+  }
+
+  .header-title {
+    font-size: 18px;
+    margin-right: auto;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-title a {
+    font-size: 18px;
+  }
+
+  #left_navigation_box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  #nav-signin, #nav-signup, #signout-btn {
+    margin-right: 6px;
+    font-size: 12px;
+  }
+
+  #user-greeting {
+    font-size: 11px;
+    padding: 2px 4px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .signup-btn {
+    font-size: 12px;
+  }
+
+  .dropbtn img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* ---- Footer ---- */
+  .footer {
+    height: auto;
+    padding: 20px 16px;
+  }
+
+  .footer .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-header {
+    font-size: 14px;
+  }
+
+  .footer-text {
+    font-size: 11px;
+  }
+
+  /* ---- Hero (index page) ---- */
+  .hero-section {
+    padding: 30px 12px;
+    min-height: auto;
+  }
+
+  .header-box {
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+  }
+
+  .header-content {
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+
+  .header-content h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .header-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    flex: 1 1 100%;
+    overflow: hidden;
+  }
+
+  .header-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about-box {
+    padding: 20px;
+  }
+
+  .highlights-section {
+    max-width: 100%;
+  }
+
+  /* ---- Cards (index page) ---- */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .card {
+    width: 85%;
+    max-width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .offset-1, .offset-2 {
+    margin-top: 0;
+  }
+
+  .card-img {
+    height: 160px;
+  }
+
+  /* ---- Hero (add page) ---- */
+  .hero {
+    height: 160px;
+    padding: 0 16px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* ---- Featured section (add page) ---- */
+  .featured-section {
+    padding: 24px 16px 60px;
+    gap: 14px;
+    flex-direction: column;
+  }
+
+  .featured-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .featured-card {
+    border-radius: 12px;
+  }
+
+  .view-all {
+    font-size: 0.9rem;
+    bottom: 16px;
+  }
+
+  /* ---- Forum ---- */
+  .forum-page {
+    padding: 20px 10px;
+  }
+
+  .forum-wrapper {
+    padding: 16px 10px;
+    width: 100%;
+  }
+
+  /* ---- About page ---- */
+  .about-main-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .about-content-column,
+  .about-map-column {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .about-iframe {
+    height: 300px;
+  }
+
+  .about-county-container ul {
+    column-count: 1;
+  }
+
+  .community-body h1 {
+    font-size: 22px;
+  }
+
+  .community-body p {
+    font-size: 14px;
+  }
+
+  .about-county-container h2 {
+    font-size: 18px;
+  }
+
+  /* ---- Forms (submit resource) ---- */
+  .page-container {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  .register-form {
+    width: 90%;
+    max-width: 320px;
+    padding: 24px;
+  }
+
+  .register-body {
+    padding: 20px;
+  }
+
+  /* ---- QR codes ---- */
   .qr-codes { gap: 12px; }
   .qr-codes img { width: 72px; height: 72px; }
+
+  /* ---- Base font tweaks ---- */
+  h1 { font-size: 22px; }
 }
 
 
@@ -775,4 +1022,39 @@ html, body {
 .about-county-container a:hover {
   color: #0056b3 !important;
   text-decoration: underline;
+}
+
+/* Mobile overrides for about page - must come AFTER base about styles */
+@media (max-width: 768px) {
+  .about-main-wrapper {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+  }
+
+  .about-content-column,
+  .about-map-column {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .about-iframe {
+    height: 300px;
+  }
+
+  .about-county-container ul {
+    column-count: 1;
+  }
+
+  .community-body h1 {
+    font-size: 22px;
+  }
+
+  .community-body p {
+    font-size: 14px;
+  }
+
+  .about-county-container h2 {
+    font-size: 18px;
+  }
 }
