@@ -1,0 +1,159 @@
+{
+    "resources": [{
+        "id": 0,
+        "rName": "Marlboro TAC (Teen Advisory Committee)",
+        "website": "https://www.marlboro-nj.gov/pages/teen-advisory-committee",
+        "desc": "Volunteer group for various events, such as soccer games, tutoring, supervising school dances, etc.",
+        "address": "1979 Township Drive\nMarlboro, NJ, 07746",
+        "contact": "732-536-0200"
+    }, {
+        "id": 1,
+        "rName": "Marlboro Farmer's Market",
+        "website": "https://www.marlboro-nj.gov/pages/farmers-market",
+        "desc": "Flea market open from jun-october on weekends and certain weekdays\nLocal farmers able to sell fresh produce here",
+        "address": "444 Route 520\nMarlboro, NJ, 07746",
+        "contact": "MFM@marlboro-nj.gov"
+    }, {
+        "id": 2,
+        "rName": "JBJ Soul Kitchen",
+        "website": "https://jbjsoulkitchen.org/",
+        "desc": "JBJ Soul Kitchen is a non-profit Community Restaurant established by the Jon Bon Jovi Soul Foundation, serving paying customers and those in-need.",
+        "address": "207 Monmouth Street\nRed Bank, NJ 07701",
+        "contact": "info@jbjsoulkitchen.org"
+    }, {
+        "id": 3,
+        "rName": "Shore To Help",
+        "website": "https://shore-to-help.com/our-success/",
+        "desc": "Monmouth non-profit group that connects volunteers with various charities, as well as planning their own fundraisers\nFunds go to various local charities (ex. Cure Kids Cancer, Cole Porter Foundation, Food Bank of Monmouth and Ocean Counties, and more)",
+        "address": "32A Beach Road\nMonmouth Beach, NJ 07750",
+        "contact": "info@shore-to-help.com"
+    }, {
+        "id": 4,
+        "rName": "Friendship Circle of New Jersey",
+        "website": "https://friendsnj.com/",
+        "desc": "The Friendship Circle of Central Jersey was founded with the goal of promoting a greater awareness and understanding of both the unique needs and the unique gifts of people with special needs, and encourages respect and empathy for those facing challenges.",
+        "address": "200 US 9, Suite 300\nManalapan, NJ 07726",
+        "contact": "732-536-2319"
+    }, {
+        "id": 5,
+        "rName": "180 Turning Lives Around",
+        "website": "https://180nj.org/",
+        "desc": "Support for survivors of domestic violence and abuse.",
+        "address": "Hazlet, NJ",
+        "contact": "732-264-4111",
+        "resourceType": "support"
+    }, {
+        "id": 6,
+        "rName": "Monmouth County Crisis Intervention Unit",
+        "website": "https://www.co.monmouth.nj.us/1315/Crisis-Intervention-Unit",
+        "desc": "Crisis intervention services for individuals in distress.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-6400",
+        "resourceType": "hotline"
+    }, {
+        "id": 7,
+        "rName": "Monmouth County Youth Services Commission",
+        "website": "https://www.co.monmouth.nj.us/1321/Youth-Services-Commission",
+        "desc": "Programs and resources for youth development and support.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-6400",
+        "resourceType": "program"
+    }, {
+        "id": 8,
+        "rName": "Monmouth County Library",
+        "website": "https://www.monmouthcountylib.org/",
+        "desc": "Library services and resources for the community.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-7220",
+        "resourceType": "nonprofit"
+    }, {
+        "id": 9,
+        "rName": "Monmouth County Arts Council",
+        "website": "https://www.monmouthcountyartscouncil.org/",
+        "desc": "Support and promotion of the arts in Monmouth County.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-8981",
+        "resourceType": "nonprofit"
+    }, {
+        "id": 15,
+        "rName": "Resource Engineering Public Hearing Document (Nov 2024)",
+        "website": "https://www.co.monmouth.nj.us/documents/70/Resource_Engineering_Public_Hearing_Nov72024.pdf",
+        "desc": "Official Monmouth County document detailing a proposed waste transfer station and public hearing process.",
+        "address": "Monmouth County, NJ",
+        "contact": "N/A",
+        "resourceType": "media"
+    }, {
+        "id": 16,
+        "rName": "Monmouth County Recycling Program",
+        "website": "https://www.co.monmouth.nj.us/1320/Recycling-Program",
+        "desc": "Information on recycling services and programs in Monmouth County.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-431-6400",
+        "resourceType": "program"
+    }, {
+        "id": 17,
+        "rName": "Asbury Park Press (APP)",
+        "website": "https://app.com",
+        "desc": "Primary local news outlet covering Monmouth and Ocean counties, providing daily updates on community news, sports, and politics.",
+        "address": "3601 Highway 66, Neptune, NJ 07753",
+        "contact": "732-922-6000",
+        "resourceType": "media"
+    }, {
+        "id": 18,
+        "rName": "The Two River Times",
+        "website": "https://tworivertimes.com",
+        "desc": "Local weekly newspaper focusing on the 'Two River' area of Monmouth County, including Red Bank, Rumson, and Fair Haven.",
+        "address": "75 West Front Street, Red Bank, NJ 07701",
+        "contact": "732-219-5788",
+        "resourceType": "media"
+    }, {
+        "id": 19,
+        "rName": "Made in Monmouth",
+        "website": "https://facebook.com",
+        "desc": "Annual fair showcasing over 200 local businesses and products made in Monmouth County. Held at Brookdale Community College.",
+        "address": "765 Newman Springs Road, Lincroft, NJ 07738",
+        "contact": "732-431-7470",
+        "resourceType": "event"
+    }, {
+        "id": 20,
+        "rName": "L.E.A.D. Fest Carnival",
+        "website": "https://njfamily.com",
+        "desc": "Annual community carnival organized by Law Enforcement Against Drugs & Violence (L.E.A.D.) featuring rides, food, and family activities.",
+        "address": "5361 U.S. 9, Howell Township, NJ 07731",
+        "contact": "609-259-1240",
+        "resourceType": "event"
+    }, {
+        "id": 21,
+        "rName": "Monmouth County Stars & Strides Flag Day 5K",
+        "website": "https://www.co.monmouth.nj.us/pressrelease.aspx",
+        "desc": "Patriotic community 5K and 1-mile walk held at Bell Works to celebrate community spirit and local history.",
+        "address": "101 Crawfords Corner Road, Holmdel, NJ 07733",
+        "contact": "732-431-7310",
+        "resourceType": "event"
+    }, {
+        "id": 22,
+        "rName": "Monmouth County Fair",
+        "website": "https://www.co.monmouth.nj.us/1322/Monmouth-County-Fair",
+        "desc": "Annual county fair featuring agricultural exhibits, live entertainment, carnival rides, and local vendors.",
+        "address": "Freehold Raceway, 511 Speedwell Avenue, Freehold, NJ 07728",
+        "contact": "732-462-0466",
+        "resourceType": "event"
+    }, {
+        "id": 23,
+        "rName": "CPC Behavioral Healthcare",
+        "website": "https://cpcbehavioral.org",
+        "desc": "Provides 24/7 mobile response and stabilization for children and adults in mental health crisis.",
+        "address": "10 Industrial Way East, Eatontown, NJ 07724",
+        "contact": "1-877-652-7624",
+        "resourceType": "support"
+    },
+    {
+      "id": 24,
+      "rName": "Annual Kites at the Pier Festival",
+      "website": "https://piervillage.com",
+      "desc": "Colorful spring event featuring giant kite displays and family activities on the Long Branch beach.",
+      "address": "50 Chelsea Avenue, Long Branch, NJ 07740",
+      "contact": "N/A",
+      "resourceType": "event"
+    }]
+}

@@ -1,0 +1,414 @@
+/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+
+@layer theme {
+
+  :root,
+  :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
+    --spacing: 0.25rem;
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+
+@layer utilities {
+  .container {
+    width: 100%;
+
+    @media (width >=40rem) {
+      max-width: 40rem;
+    }
+
+    @media (width >=48rem) {
+      max-width: 48rem;
+    }
+
+    @media (width >=64rem) {
+      max-width: 64rem;
+    }
+
+    @media (width >=80rem) {
+      max-width: 80rem;
+    }
+
+    @media (width >=96rem) {
+      max-width: 96rem;
+    }
+  }
+
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
+
+  .m-\[2\%\] {
+    margin: 2%;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+#user-greeting {
+  color: #2d6a4f;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 4px 10px;
+}
+
+#signout-btn {
+  cursor: pointer;
+  color: #d00;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+#signout-btn:hover {
+  color: #a00;
+}
+
+.signin-footer {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.signin-footer a {
+  color: #2d6a4f;
+  text-decoration: underline;
+}
+
+@layer base {
+  h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 28px;
+  }
+}
+
+.forum-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 12px;
+}
+
+.forum-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.forum-subheading {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.forum-signin-prompt {
+  background: #f5f5f5;
+  border-left: 3px solid #333;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+
+.forum-signin-prompt a {
+  color: #0066cc;
+}
+
+.new-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.new-post-form h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.new-post-form input,
+.new-post-form textarea,
+#thread-category {
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.new-post-form textarea {
+  resize: vertical;
+}
+
+.post-submit-btn {
+  align-self: flex-end;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.post-submit-btn:hover {
+  background: #555;
+}
+
+.forum-card {
+  border: 1px solid #ddd;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.forum-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.forum-card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.forum-author {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.forum-time {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.forum-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #eee;
+  padding: 2px 8px;
+  text-transform: capitalize;
+}
+
+.forum-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 4px 0 6px;
+}
+
+.forum-body {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.forum-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vote-btn,
+.reply-toggle-btn {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.vote-btn:hover,
+.reply-toggle-btn:hover {
+  background: #eee;
+}
+
+.vote-btn.active {
+  background: #ddd;
+  border-color: #999;
+  font-weight: 600;
+}
+
+.vote-btn-sm {
+  padding: 2px 8px;
+  font-size: 0.8rem;
+}
+
+.delete-btn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #c00;
+}
+
+.delete-btn:hover {
+  background: #fee;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filter-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #666;
+  margin-right: 4px;
+}
+
+.filter-btn {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: #e5e5e5;
+}
+
+.filter-btn.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+/* Replies */
+.replies-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.reply-card {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.reply-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.reply-author {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.reply-time {
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.reply-body {
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+}
+
+.reply-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-reply-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c00;
+  font-size: 0.8rem;
+}
+
+.no-replies {
+  color: #aaa;
+  font-style: italic;
+  font-size: 0.85rem;
+  padding: 6px 0;
+}
+
+.reply-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  align-items: flex-end;
+}
+
+.reply-form textarea {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  font-size: 0.85rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.reply-submit-btn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.reply-submit-btn:hover {
+  background: #555;
+}
+
+.image-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.image-upload-label {
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.image-upload-input {
+  font-size: 0.8rem;
+}
+
+.forum-image-wrap {
+  margin: 6px 0 10px;
+}
+
+.forum-image {
+  max-width: 100%;
+  max-height: 400px;
+  border: 1px solid #ddd;
+}
+
+.forum-empty {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 30px 0;
+}
