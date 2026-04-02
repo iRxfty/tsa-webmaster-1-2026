@@ -111,6 +111,38 @@
                 {% endif %}
             {% endfor %}
         </ul>
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('info')">
+            Information Resources
+        </h3>
+        <ul id="info" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "info" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <h3 class="text-xl mt-6 mb-2 cursor-pointer hover:text-[rgb(153,128,168)] transition"
+            onclick="toggleSection('other')">
+            Other Resources
+        </h3>
+        <ul id="other" class="hidden">
+            {% for r in resources %}
+                {% if r.resourceType == "other" %}
+                    <li class="resource-item hover:bg-gray-200 transition rounded-md px-2 py-1">
+                        <h3 class="rTitle">{{ r.rName }}</h3>
+                        <p class="rInfo">{{ r.address }} | {{ r.contact }}</p>
+                        <a href="{{ r.website }}" class="rLink">{{ r.website }}</a>
+                        <p class="rDesc">{{ r.desc }}</p>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
     </div>
 </div>
 
