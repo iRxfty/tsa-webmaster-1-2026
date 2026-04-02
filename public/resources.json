@@ -155,5 +155,59 @@
       "address": "50 Chelsea Avenue, Long Branch, NJ 07740",
       "contact": "N/A",
       "resourceType": "event"
+    },
+    {
+        "id": 25,
+        "rName": "988 Suicide & Crisis Lifeline",
+        "website": "https://988lifeline.org",
+        "desc": "24/7 confidential support for anyone in emotional distress or suicidal crisis via call, text, or chat.",
+        "address": "National/Local Access",
+        "contact": "988",
+        "resourceType": "hotline"
+    },
+    {
+        "id": 26,
+        "rName": "Monmouth Medical Center PESS",
+        "website": "https://rwjbh.org",
+        "desc": "Designated screening center for Monmouth County psychiatric emergencies and immediate intervention.",
+        "address": "300 Second Avenue, Long Branch, NJ 07740",
+        "contact": "732-923-6999",
+        "resourceType": "hotline"
+    },
+    {
+        "id": 27,
+        "rName": "CONTACT of Ocean & Monmouth Counties",
+        "website": "https://contactoceanmonmouth.org",
+        "desc": "24/7 volunteer-run hotline providing crisis intervention, compassionate listening, and community referrals.",
+        "address": "Monmouth County, NJ",
+        "contact": "732-240-6100",
+        "resourceType": "hotline"
+    },
+    {
+        "id": 28,
+        "rName": "2NDFLOOR Youth Helpline",
+        "website": "https://2ndfloor.org",
+        "desc": "Confidential helpline for NJ youth and young adults (ages 10-24) to discuss daily life challenges or crises.",
+        "address": "New Jersey",
+        "contact": "888-222-2228",
+        "resourceType": "support"
+    },
+    {
+        "id": 29,
+        "rName": "ReachNJ (Addiction Support)",
+        "website": "https://reachnj.gov",
+        "desc": "Immediate assistance from trained addiction counselors for those seeking treatment for substance use disorders.",
+        "address": "New Jersey",
+        "contact": "844-732-2465",
+        "resourceType": "support"
+    },
+    {
+        "id": 30,
+        "rName": "NJ 211",
+        "website": "https://nj211.org",
+        "desc": "Statewide resource for finding local community and government programs including food, housing, and utility assistance.",
+        "address": "New Jersey",
+        "contact": "2-1-1",
+        "resourceType": "support"
     }]
 }
