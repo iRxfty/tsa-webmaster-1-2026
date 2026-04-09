@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif; /* put here for reference, can be changed later*/
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+#page-wrapper {
+    flex: 1; /* pushes footer down */
+}
+#navigation_box {
+  background-color: #abdcab; /* u can change this color*/
+  display: flex; /* pushes left navbar to the left and right navbar to the right */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  height: 75px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+#left_navigation_box {
+  display: flex;
+  gap: 10px;
+}
+#right_navigation_box {
+    display: flex;
+  gap: 10px;
+}
+#navigation_box a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: 0.3s; /* WE MUST HAVE FADING!!! */
+}
+#navigation_box a:hover {
+  color: #87ceeb; /* can be changed :) */
+}
+#right_navigation_box a[href="signup.html"] {
+  background-color: #000000;
+  border-radius: 4px;
+}
+#right_navigation_box a[href="signup.html"]:hover {
+  background-color: #87ceeb;
+}
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #000000;
+  color: white;
+}
+#main-footer {
+    background-color: #abdcab;
+    color: #000000;
+    padding: 24 5%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-right a {
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.footer-right a:hover {
+    color: #87ceeb;
+}
